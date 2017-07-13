@@ -35,6 +35,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Diagnostics.DiagnosticSource.4.4.0\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Fabric, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
       <HintPath>..\..\..\..\packages\Microsoft.ServiceFabric.5.0.135\lib\net45\System.Fabric.dll</HintPath>
       <Private>True</Private>
@@ -48,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FabricTelemetryInitializerExtension.cs" />
+    <Compile Include="Module\ServiceFabricSDKEventSource.cs" />
+    <Compile Include="Module\CorrelationIdLookupHelper.cs" />
+    <Compile Include="Module\ICorrelationIdLookupHelper.cs" />
+    <Compile Include="Module\SdkVersionUtils.cs" />
+    <Compile Include="Module\ServiceRemotingRequestTrackingTelemetryModule.cs" />
+    <Compile Include="Module\ServiceRemotingDiagnosticSourceListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
